@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ancient Civilizations — The Complete Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c140c;
+    --panel:#291d12;
+    --line1:#5c4326;
+    --line2:#8a6538;
+    --gold:#c9a13b;
+    --clay:#b25b3f;
+    --chalk:#f3ead9;
+    --chalk-dim:#bfab8d;
+    --max:700px;
+    --wide:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--ink);color:var(--chalk);font-family:"Source Serif 4",Georgia,serif;line-height:1.65;font-size:18px;}
+  h1,h2,h3{font-family:"Big Shoulders Display",sans-serif;text-transform:uppercase;letter-spacing:0.01em;color:var(--chalk);margin:0;}
+  a{color:var(--gold);}
+  a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+  .courtnav{position:sticky;top:0;z-index:50;background:rgba(28,20,12,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(243,234,217,0.12);}
+  .courtnav-inner{max-width:var(--wide);margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:22px;overflow-x:auto;}
+  .courtnav-mark{display:flex;align-items:center;gap:8px;font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:1.05rem;color:var(--chalk);white-space:nowrap;}
+  .chapter-link{color:var(--chalk-dim);text-decoration:none;font-size:0.82rem;letter-spacing:0.03em;text-transform:uppercase;font-family:"Big Shoulders Display",sans-serif;white-space:nowrap;border-bottom:2px solid transparent;padding-bottom:2px;}
+  .chapter-link:hover{color:var(--gold);border-color:var(--gold);}
+
+  .hero{position:relative;padding:72px 24px 40px;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%, #35240f 0%, var(--ink) 62%);}
+  .hero-inner{max-width:var(--wide);margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;}
+  .hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:0.9;font-weight:900;}
+  .hero h1 span{display:block;color:var(--gold);}
+  .hero-tag{margin-top:18px;max-width:46ch;color:var(--chalk-dim);font-size:1.08rem;}
+
+  .scoreboard{background:var(--panel);border-top:1px solid rgba(243,234,217,0.1);border-bottom:1px solid rgba(243,234,217,0.1);}
+  .scoreboard-inner{max-width:var(--wide);margin:0 auto;padding:26px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .stat-num{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:2rem;color:var(--gold);line-height:1;}
+  .stat-label{font-size:0.76rem;color:var(--chalk-dim);text-transform:uppercase;letter-spacing:0.05em;margin-top:6px;font-family:"Big Shoulders Display",sans-serif;}
+
+  .divider{display:flex;align-items:center;gap:14px;max-width:var(--wide);margin:0 auto;padding:56px 24px 0;}
+  .divider .line{flex:1;height:0;border-top:2px dashed rgba(243,234,217,0.2);}
+  .divider svg{width:18px;height:18px;flex:0 0 auto;}
+
+  .chapter{padding:34px 24px 10px;}
+  .chapter-head{max-width:var(--max);margin:0 auto 22px;display:flex;align-items:baseline;gap:16px;}
+  .chapter-num{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:2.5rem;color:var(--line2);line-height:1;}
+  .chapter-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;}
+  .chapter p{max-width:var(--max);margin:0 auto 18px;}
+  .chapter p.lede{font-size:1.1rem;}
+  .chapter ul{max-width:var(--max);margin:0 auto 20px;padding-left:22px;}
+  .chapter li{margin-bottom:8px;}
+  .chapter figure{max-width:var(--max);margin:28px auto;}
+  .chapter figcaption{font-size:0.85rem;color:var(--chalk-dim);margin-top:10px;font-family:"Big Shoulders Display",sans-serif;}
+
+  .timeline{max-width:var(--max);margin:30px auto;border-left:2px solid var(--line2);padding-left:24px;}
+  .tl-item{margin-bottom:26px;position:relative;}
+  .tl-item::before{content:"";position:absolute;left:-30px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--clay);}
+  .tl-year{font-family:"Big Shoulders Display",sans-serif;font-weight:700;color:var(--gold);font-size:1.2rem;}
+  .tl-item p{margin:4px 0 0;}
+
+  .skill-grid{max-width:var(--max);margin:26px auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .skill-card{background:var(--panel);border:1px solid rgba(243,234,217,0.1);padding:18px;}
+  .skill-card svg{width:34px;height:34px;margin-bottom:10px;}
+  .skill-card h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+  .skill-card p{margin:0;font-size:0.96rem;color:var(--chalk-dim);max-width:none;}
+
+  .callout{max-width:var(--max);margin:26px auto;padding:20px 22px;background:var(--panel);border-left:4px solid var(--clay);}
+  .callout p{margin:0;max-width:none;}
+
+  .glossary{max-width:var(--wide);margin:24px auto;display:grid;grid-template-columns:1fr 1fr;gap:0 40px;}
+  .gloss-item{padding:14px 0;border-bottom:1px solid rgba(243,234,217,0.1);}
+  .gloss-item dt{font-family:"Big Shoulders Display",sans-serif;font-weight:700;color:var(--gold);font-size:1rem;}
+  .gloss-item dd{margin:4px 0 0;color:var(--chalk-dim);font-size:0.94rem;}
+
+  footer{margin-top:60px;padding:40px 24px 60px;border-top:1px solid rgba(243,234,217,0.12);background:#211609;}
+  footer .wrap{color:var(--chalk-dim);font-size:0.9rem;}
+
+  @media(max-width:760px){
+    .hero-inner{grid-template-columns:1fr;}
+    .scoreboard-inner{grid-template-columns:1fr 1fr;}
+    .skill-grid{grid-template-columns:1fr;}
+    .glossary{grid-template-columns:1fr;}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<nav class="courtnav">
+  <div class="courtnav-inner">
+    <span class="courtnav-mark">𓂀 Civilizations</span>
+    <a class="chapter-link" href="#mesopotamia">Mesopotamia</a>
+    <a class="chapter-link" href="#egypt">Egypt</a>
+    <a class="chapter-link" href="#greece">Greece</a>
+    <a class="chapter-link" href="#china">China</a>
+    <a class="chapter-link" href="#glossary">Glossary</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Ancient<span>Civilizations</span></h1>
+      <p class="hero-tag">A complete, plain-language reference on the early civilizations that laid the groundwork for writing, law, architecture, and government.</p>
+    </div>
+    <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a pyramid and columns">
+      <polygon points="180,40 260,220 100,220" fill="#8a6538"/>
+      <polygon points="180,40 220,220 260,220" fill="#5c4326"/>
+      <rect x="40" y="180" width="16" height="40" fill="#b25b3f"/>
+      <rect x="70" y="160" width="16" height="60" fill="#b25b3f"/>
+      <rect x="280" y="170" width="16" height="50" fill="#c9a13b"/>
+      <rect x="310" y="150" width="16" height="70" fill="#c9a13b"/>
+      <circle cx="60" cy="60" r="18" fill="none" stroke="#c9a13b" stroke-width="2"/>
+    </svg>
+  </div>
+</header>
+
+<div class="scoreboard">
+  <div class="scoreboard-inner">
+    <div><div class="stat-num">3100 BCE</div><div class="stat-label">Earliest known writing</div></div>
+    <div><div class="stat-num">2560 BCE</div><div class="stat-label">Great Pyramid completed</div></div>
+    <div><div class="stat-num">508 BCE</div><div class="stat-label">Democracy begins in Athens</div></div>
+    <div><div class="stat-num">221 BCE</div><div class="stat-label">China unified, Qin dynasty</div></div>
+  </div>
+</div>
+
+<div class="divider" aria-hidden="true"><div class="line"></div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#8a6538" stroke-width="1.6"/></svg><div class="line"></div></div>
+
+<section class="chapter" id="mesopotamia">
+  <div class="chapter-head"><span class="chapter-num">01</span><h2>Mesopotamia</h2></div>
+  <p class="lede">Located between the Tigris and Euphrates rivers in modern-day Iraq, Mesopotamia is often called the "cradle of civilization."</p>
+  <p>The Sumerians developed cuneiform, one of the earliest writing systems, pressed into clay tablets with a reed stylus. They also built some of the first cities with organised government, and later rulers such as Hammurabi issued written legal codes covering trade, property, and punishment — among the earliest known law codes in history.</p>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-year">c. 3100 BCE</div><p>Cuneiform writing develops in Sumer, one of the earliest writing systems known.</p></div>
+    <div class="tl-item"><div class="tl-year">c. 1754 BCE</div><p>The Code of Hammurabi is inscribed, one of the earliest and most complete written legal codes.</p></div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><div class="line"></div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#8a6538" stroke-width="1.6"/></svg><div class="line"></div></div>
+
+<section class="chapter" id="egypt">
+  <div class="chapter-head"><span class="chapter-num">02</span><h2>Ancient Egypt</h2></div>
+  <p class="lede">Centred along the Nile River, Egyptian civilization lasted for roughly three thousand years.</p>
+  <p>Egypt was ruled by pharaohs believed to hold a divine role, and is remembered for monumental architecture such as the pyramids at Giza, a system of hieroglyphic writing, and advances in medicine, astronomy, and engineering. The predictable annual flooding of the Nile supported farming that sustained one of the ancient world's largest populations.</p>
+</section>
+
+<div class="divider" aria-hidden="true"><div class="line"></div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#8a6538" stroke-width="1.6"/></svg><div class="line"></div></div>
+
+<section class="chapter" id="greece">
+  <div class="chapter-head"><span class="chapter-num">03</span><h2>Ancient Greece</h2></div>
+  <p class="lede">Greek city-states developed contrasting political systems and left a lasting mark on philosophy, science, and government.</p>
+  <div class="skill-grid">
+    <div class="skill-card"><h3>Athens</h3><p>Credited with an early form of democracy, where free male citizens could vote directly on laws and policy.</p></div>
+    <div class="skill-card"><h3>Sparta</h3><p>A rival city-state built around military discipline and a highly structured citizen-soldier society.</p></div>
+    <div class="skill-card"><h3>Philosophy</h3><p>Thinkers including Socrates, Plato, and Aristotle shaped Western ideas about logic, ethics, and politics.</p></div>
+    <div class="skill-card"><h3>Mathematics</h3><p>Figures such as Pythagoras and Euclid produced foundational work in geometry still taught today.</p></div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><div class="line"></div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#8a6538" stroke-width="1.6"/></svg><div class="line"></div></div>
+
+<section class="chapter" id="china">
+  <div class="chapter-head"><span class="chapter-num">04</span><h2>Ancient China</h2></div>
+  <p class="lede">Successive dynasties shaped Chinese civilization over thousands of years.</p>
+  <p>The Qin dynasty unified China in 221 BCE and began connecting earlier defensive walls into what eventually became the Great Wall. Later dynasties, including the Han and Tang, developed papermaking, the compass, and one of the world's oldest continuous bureaucratic systems of government, staffed through competitive examinations.</p>
+  <div class="callout"><p>Elsewhere, the Indus Valley civilization built carefully planned cities with drainage systems as early as 2500 BCE, and the Maya in Mesoamerica independently developed complex calendars, writing, and astronomy.</p></div>
+</section>
+
+<div class="divider" aria-hidden="true"><div class="line"></div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#8a6538" stroke-width="1.6"/></svg><div class="line"></div></div>
+
+<section class="chapter" id="glossary">
+  <div class="chapter-head"><span class="chapter-num">05</span><h2>Glossary of terms</h2></div>
+  <dl class="glossary">
+    <div class="gloss-item"><dt>Cuneiform</dt><dd>One of the earliest writing systems, made of wedge-shaped marks pressed into clay.</dd></div>
+    <div class="gloss-item"><dt>Hieroglyphics</dt><dd>The formal writing system of ancient Egypt, using pictorial symbols.</dd></div>
+    <div class="gloss-item"><dt>City-state</dt><dd>An independent city that governs itself and its surrounding territory, common in ancient Greece.</dd></div>
+    <div class="gloss-item"><dt>Dynasty</dt><dd>A sequence of rulers from the same family or line, common in ancient China and Egypt.</dd></div>
+    <div class="gloss-item"><dt>Empire</dt><dd>A large political unit made up of multiple territories or peoples under one ruling power.</dd></div>
+    <div class="gloss-item"><dt>Ziggurat</dt><dd>A tiered, pyramid-shaped temple structure built in ancient Mesopotamia.</dd></div>
+  </dl>
+</section>
+
+<footer><div class="wrap"><p>A general, plain-language reference on early civilizations across Mesopotamia, Egypt, Greece, and China.</p></div></footer>
+</body>
+</html>
